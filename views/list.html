@@ -1,0 +1,169 @@
+{% extends 'layout.html' %}
+
+{% block title %}Liang{% endblock %}
+
+{% block content %}
+  <div id="top" class="cl">
+      
+      <div class="z">
+         <a href="https://www.facebook.com/profile.php?id=100000328042295" style="padding-left:4px;padding-right:4px" title="facebook">facebook</a>
+	     <a href="https://www.google.com/calendar/" style="padding-left:4px;padding-right:4px" title="Google日曆">日曆</a>
+		 <a href="https://translate.google.com.tw/" style="padding-left:4px;padding-right:4px" title="Google翻譯">翻譯</a>
+		 <a href="https://www.youtube.com/" style="padding-left:4px;padding-right:4px">Youtube</a>
+		 <a href="https://www.google.com.tw/maps/" style="padding-left:4px;padding-right:4px" title="Google地圖">地圖</a>
+		 <a href="https://www.google.com.tw/" style="padding-left:4px;padding-right:4px" title="Google首頁">google</a>
+	  </div>
+   
+   </div>
+   
+   <div id="mid" class="wp cl">
+      <h2 id="spaceinfoshow">
+	     <strong id="spacename" class="mbn">你好!!我是阿亮~~</strong>
+		 <span class="fw fs">
+		    <p>Welcome</p>
+		 </span>
+		 <span id="spacedescription" class="fs1	 mt fw"></span>
+	  </h2>
+	  <div id="nv">
+	     <ul>
+		    <li>
+			   <a href="">首頁</a>
+			</li>
+			<li>
+			   <a href="Light02.html">相簿</a>
+			</li>
+			<li>
+			   <a href="Light03.html">好站連結</a>
+			</li>
+			<li>
+			   <a href="">留言板</a>
+			</li>
+         </ul>
+	  </div>
+   </div>
+   
+   <div id="down" class="wp cl">
+      <div id="diypage" class="area">
+	     <div id="frame1" class="frame cl">
+		    
+			<div id="frame1_left" style="width:720px" class="z column">
+			   
+			   <div id="share" class="block">
+                  
+                  <div class="title">
+                     <span>
+                        <a href="">分享</a>
+                     </span>
+                  </div>
+                  
+                  <div id="share-content" class="db_pd">
+                     <ul class="cl">
+                        <li>
+						   <font style="background-color:rgb(253, 253, 253)">【轉載地點】：YouTube</font>
+						</li>
+						<li>
+						   <iframe width="560" height="315" src="https://www.youtube.com/embed/Ph4kOamy2ao" frameborder="0" allowfullscreen></iframe>
+                        </li>
+                     </ul>
+                  </div>
+
+               </div>
+
+			   <div id="personalinfo" class="block">
+			      
+			      <div class="title">
+				     <span>
+					    <a href="">關於我</a>
+					 </span>
+				  </div>
+			      
+			      <div id="personalinfo-content" class="db_pd">
+				     <ul id="p1" class="cl">
+					    <li>
+						   <em>性別</em>
+						   男
+						</li>
+						<li>
+						   <em>情感狀態</em>
+						   穩定交往中
+						</li>
+						<li>
+						   <em>學歷</em>
+						   國立金門大學資訊工程學系
+						</li>
+						<li>
+						   <em>生日</em>
+						   1994.4.20
+						</li>
+						<li>
+						   <em>居住地</em>
+						   桃園市
+						</li>
+				     </ul>
+				  </div>
+
+			   </div>
+			   
+			   
+
+            </div>
+
+		    <div id="frame1_right" style="width:240px" class="z column">
+			   
+			   <div id="profile" class="block">
+			    <div class="title">
+				     <span>
+					    <a href="">大頭貼照</a>
+					 </span>
+				  </div>
+
+				  <div id="profile-picture" class="db_pd ta">
+				     <div>
+					    <img src="C:/Users/Liang/Desktop/Midterm/views/pic/L1.jpg"width="200" height="200">
+						<h3 class="mbn" style="color:#069">阿亮</h3>
+				     </div>
+				  </div>
+
+			   </div>
+
+			   <div id="album" class="block">
+			      <div class="title">
+				     <span>
+					    <a href="">相簿</a>
+					 </span>
+				  </div>
+				  <div id="album-content" class="db_pd ta">
+				     <ul class="cl">
+					    <h3 class="mbn" style="color:#069">無</h3>
+					 </ul>
+				  </div>
+			  </div>
+		    
+			
+               <div id="wall" class="block">
+                  <div class="title">
+                     <span>
+                        <a href="">留言板</a>
+                     </span>
+                  </div>
+				  
+				  <div id="wall-content" class="db_pd">
+				     <p>You have <strong>{{ posts.length }}</strong> posts!</p>
+                     <p><a href="/post/new">Create a Post</a></p>
+                     <ul id="posts">
+                     {% for post in posts %}
+                        <li>
+                           <h2>{{ post.title }}</h2>
+                           <p><a href="/post/{{ post.id }}">Read post</a></p>
+                        </li>
+                     {% endfor %}
+                     </ul>
+				  </div>
+			   </div>
+			</div>
+			</div>
+		
+      </div>
+   </div>	  
+   
+{% endblock %}

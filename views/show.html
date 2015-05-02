@@ -1,0 +1,72 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+<div id="top" class="cl">
+      
+      <div class="z">
+         <a href="https://www.facebook.com/profile.php?id=100000328042295" style="padding-left:4px;padding-right:4px" title="facebook">facebook</a>
+	     <a href="https://www.google.com/calendar/" style="padding-left:4px;padding-right:4px" title="Google日曆">日曆</a>
+		 <a href="https://translate.google.com.tw/" style="padding-left:4px;padding-right:4px" title="Google翻譯">翻譯</a>
+		 <a href="https://www.youtube.com/" style="padding-left:4px;padding-right:4px">Youtube</a>
+		 <a href="https://www.google.com.tw/maps/" style="padding-left:4px;padding-right:4px" title="Google地圖">地圖</a>
+		 <a href="https://www.google.com.tw/" style="padding-left:4px;padding-right:4px" title="Google首頁">google</a>
+	  </div>
+   
+   </div>
+   
+   <div id="mid" class="wp cl">
+      <h2 id="spaceinfoshow">
+	     <strong id="spacename" class="mbn">留言板</strong>
+		 <span class="fw fs">
+		    <p>Welcome</p>
+		 </span>
+		 <span id="spacedescription" class="fs1	 mt fw"></span>
+	  </h2>
+	  <div id="nv">
+	     <ul>
+		    <li>
+			   <a href="Light01.html">首頁</a>
+			</li>
+			<li>
+			   <a href="Light02.html">相簿</a>
+			</li>
+			<li>
+			   <a href="Light03.html">好站連結</a>
+			</li>
+			<li>
+			   <a href="">留言板</a>
+			</li>
+         </ul>
+	  </div>
+   </div>
+   
+    <div id="down" class="wp cl">
+        <div id="diypage" class="area">
+	        <div id="frame1" class="frame cl">
+		    
+			    <div id="frame1">
+			   
+			        <div id="ct" class="ct2 wp cl">
+						<div class="mn">
+							<div class="bm">
+								<div class="bm_c">
+									<div class="bm_c">
+										<h1>標題 : {{ post.title }}</h1>
+											<h2>內容</h2>
+											<p>{{ post.body }}</p>
+											<p><a href="./..">返回</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+    			</div>                  
+            </div>
+		 </div>
+    </div>	  
+
+
+ 
+{% endblock %}
